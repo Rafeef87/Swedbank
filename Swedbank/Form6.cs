@@ -35,8 +35,8 @@ namespace Swedbank
         private void button3_Click(object sender, EventArgs e)
         {
             string anvnamn = textBox1.Text.Trim();
-            string losenord = textBox2.Text.Trim();
-            
+            string losenord = textBox3.Text.Trim();
+
 
 
             if (losenord != "")
@@ -53,7 +53,8 @@ namespace Swedbank
                 textBox3.Text = "";
                 textBox4.Text = "";
             }
-            else {
+            else
+            {
                 MessageBox.Show("Fyll i nytt lösenord");
                 label9.Text = "*";
                 label11.Text = "*";
@@ -61,5 +62,7 @@ namespace Swedbank
                 label13.Text = "*";
             }
         }
+
+     
     }
 }

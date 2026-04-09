@@ -112,9 +112,9 @@
             label2.Location = new Point(171, 112);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(78, 15);
+            label2.Size = new Size(100, 15);
             label2.TabIndex = 44;
-            label2.Text = "Användar ID: ";
+            label2.Text = "Användar Namn: ";
             // 
             // textBox1
             // 

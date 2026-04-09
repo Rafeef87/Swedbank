@@ -52,7 +52,7 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Location = new Point(146, 214);
-            dateTimePicker1.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(168, 23);
             dateTimePicker1.TabIndex = 99;
@@ -60,8 +60,8 @@
             // button4
             // 
             button4.BackColor = SystemColors.ControlLightLight;
-            button4.Location = new Point(433, 319);
-            button4.Margin = new Padding(2, 2, 2, 2);
+            button4.Location = new Point(533, 325);
+            button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(151, 26);
             button4.TabIndex = 98;
@@ -73,7 +73,7 @@
             // 
             button3.BackColor = SystemColors.ControlLightLight;
             button3.Location = new Point(121, 325);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(162, 29);
             button3.TabIndex = 97;
@@ -86,16 +86,16 @@
             dataGridView1.BackgroundColor = Color.PeachPuff;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(342, 137);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(344, 165);
+            dataGridView1.Size = new Size(506, 165);
             dataGridView1.TabIndex = 96;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(146, 182);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(168, 23);
             textBox2.TabIndex = 95;
@@ -133,7 +133,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(146, 151);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(168, 23);
             textBox1.TabIndex = 94;
@@ -143,7 +143,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.PeachPuff;
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(146, 38);
+            label1.Location = new Point(190, 38);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(443, 37);
@@ -152,10 +152,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(637, 44);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Location = new Point(747, 44);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(78, 20);
+            button2.Size = new Size(78, 31);
             button2.TabIndex = 89;
             button2.Text = "Logga ut";
             button2.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             // button1
             // 
             button1.Location = new Point(32, 44);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(78, 20);
             button1.TabIndex = 88;
@@ -185,7 +185,7 @@
             // textBox3
             // 
             textBox3.Location = new Point(146, 251);
-            textBox3.Margin = new Padding(2, 2, 2, 2);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(168, 23);
             textBox3.TabIndex = 101;
@@ -193,8 +193,8 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(637, 344);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(789, 358);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -206,7 +206,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.OrangeRed;
-            label7.Location = new Point(553, 362);
+            label7.Location = new Point(705, 376);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(65, 15);
@@ -217,7 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(724, 398);
+            ClientSize = new Size(890, 416);
             Controls.Add(pictureBox1);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -234,7 +234,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form16";
             Text = "Överföring";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -50,7 +50,7 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Location = new Point(192, 160);
-            dateTimePicker1.Margin = new Padding(2, 2, 2, 2);
+            dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(168, 23);
             dateTimePicker1.TabIndex = 87;
@@ -58,8 +58,8 @@
             // button4
             // 
             button4.BackColor = SystemColors.ControlLightLight;
-            button4.Location = new Point(463, 293);
-            button4.Margin = new Padding(2, 2, 2, 2);
+            button4.Location = new Point(576, 293);
+            button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(151, 26);
             button4.TabIndex = 86;
@@ -71,7 +71,7 @@
             // 
             button3.BackColor = SystemColors.ControlLightLight;
             button3.Location = new Point(132, 296);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(167, 23);
             button3.TabIndex = 85;
@@ -84,16 +84,16 @@
             dataGridView1.BackgroundColor = Color.PeachPuff;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(386, 95);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(316, 165);
+            dataGridView1.Size = new Size(489, 165);
             dataGridView1.TabIndex = 84;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(192, 200);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(168, 23);
             textBox2.TabIndex = 83;
@@ -131,7 +131,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(192, 125);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(168, 23);
             textBox1.TabIndex = 82;
@@ -151,7 +151,7 @@
             // button2
             // 
             button2.Location = new Point(623, 34);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(78, 20);
             button2.TabIndex = 77;
@@ -162,7 +162,7 @@
             // button1
             // 
             button1.Location = new Point(31, 34);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(78, 20);
             button1.TabIndex = 76;
@@ -173,8 +173,8 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(643, 338);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(816, 337);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -186,7 +186,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.OrangeRed;
-            label7.Location = new Point(559, 357);
+            label7.Location = new Point(732, 356);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(65, 15);
@@ -198,7 +198,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(730, 407);
+            ClientSize = new Size(902, 407);
             Controls.Add(pictureBox1);
             Controls.Add(label7);
             Controls.Add(dateTimePicker1);
@@ -213,7 +213,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form15";
             Text = "Uttag";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

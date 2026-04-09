@@ -218,7 +218,7 @@
             // button6
             // 
             button6.BackColor = Color.Coral;
-            button6.Location = new Point(516, 269);
+            button6.Location = new Point(610, 285);
             button6.Margin = new Padding(2);
             button6.Name = "button6";
             button6.Size = new Size(155, 36);
@@ -235,13 +235,13 @@
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(397, 165);
+            dataGridView1.Size = new Size(579, 165);
             dataGridView1.TabIndex = 17;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(716, 320);
+            pictureBox1.Location = new Point(871, 365);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 47);
@@ -254,7 +254,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.OrangeRed;
-            label7.Location = new Point(632, 339);
+            label7.Location = new Point(787, 384);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(65, 15);
@@ -308,7 +308,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(808, 378);
+            ClientSize = new Size(1023, 447);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);

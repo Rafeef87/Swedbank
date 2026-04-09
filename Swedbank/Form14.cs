@@ -43,7 +43,7 @@ namespace Swedbank
             string datum = dateTimePicker1.Value.ToShortDateString();
             string insattningstr = textBox2.Text.Trim();
 
-            MessageBox.Show(datum);
+            
 
             if (kontonum == "" || insattningstr == "")
             {
