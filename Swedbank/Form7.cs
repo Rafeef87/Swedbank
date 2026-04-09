@@ -27,16 +27,30 @@ namespace Swedbank
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Form5 fr5 = new Form5();
-            fr5.Show();
-            this.Hide();
+            if(Inloggning.UserRole == "Admin")
+            {
+                Form5 fr5 = new Form5();
+                fr5.Show();
+                this.Hide();
+                }
+            else
+            {
+                MessageBox.Show("Du har inte behörighet att komma åt adminpanelen.");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form13 fr13 = new Form13();
-            fr13.Show();
-            this.Hide();
+            if (Inloggning.UserRole == "Admin")
+            {
+                Form13 fr13 = new Form13();
+                fr13.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Du har inte behörighet att komma åt adminpanelen.");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

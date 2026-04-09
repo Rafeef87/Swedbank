@@ -14,8 +14,8 @@ namespace Swedbank
             InitializeComponent();
         }
 
-
-
+        public static string UserRole;
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -48,6 +48,8 @@ namespace Swedbank
 
             string dbLosen = result["losenord"].ToString();
             string dbRoll = result["roll"].ToString();
+
+            UserRole = dbRoll;
 
             result.Close();
             cn.Close();
