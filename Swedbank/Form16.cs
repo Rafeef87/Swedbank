@@ -36,37 +36,46 @@ namespace Swedbank
             string kontonum = textBox1.Text.Trim();
             string kontonum2 = textBox2.Text.Trim();
             string datum = dateTimePicker1.Value.ToShortDateString();
-            int belopp = int.Parse(textBox3.Text.Trim());
+            string belopp = textBox3.Text.Trim();
 
-            cn.Open();
+            if (kontonum == "" || kontonum2 == "" || belopp == "")
+            {
+                MessageBox.Show("Du måste fylla i alla rutor");
+                return;
+            }
+            else
+            {
+                int belopp1 = int.Parse(textBox3.Text.Trim());
+                cn.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT Saldo FROM Konto WHERE kontonum = '" + kontonum + "'", cn);
-            cmd.ExecuteNonQuery();
-            int saldo = (int)cmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand("SELECT Saldo FROM Konto WHERE kontonum = '" + kontonum + "'", cn);
+                cmd.ExecuteNonQuery();
+                int saldo = (int)cmd.ExecuteScalar();
 
-            SqlCommand cmd2 = new SqlCommand("SELECT Saldo FROM Konto WHERE kontonum = '" + kontonum2 + "'", cn);
-            cmd2.ExecuteNonQuery();
-            int saldo2 = (int)cmd.ExecuteScalar();
+                SqlCommand cmd2 = new SqlCommand("SELECT Saldo FROM Konto WHERE kontonum = '" + kontonum2 + "'", cn);
+                cmd2.ExecuteNonQuery();
+                int saldo2 = (int)cmd.ExecuteScalar();
 
-            int saldoefter = saldo - belopp;
-            int saldoefter2 = saldo2 + belopp;
+                int saldoefter = saldo - belopp1;
+                int saldoefter2 = saldo2 + belopp1;
 
-            string query = $"UPDATE Konto SET saldo = '{saldoefter}' WHERE kontonum = '{kontonum}'";
-            SqlCommand cmd3 = new SqlCommand(query, cn);
-            cmd3.ExecuteNonQuery();
+                string query = $"UPDATE Konto SET saldo = '{saldoefter}' WHERE kontonum = '{kontonum}'";
+                SqlCommand cmd3 = new SqlCommand(query, cn);
+                cmd3.ExecuteNonQuery();
 
-            string query2 = $"UPDATE Konto SET saldo = '{saldoefter2}' WHERE kontonum = '{kontonum2}'";
-            SqlCommand cmd4 = new SqlCommand(query, cn);
-            cmd3.ExecuteNonQuery();
+                string query2 = $"UPDATE Konto SET saldo = '{saldoefter2}' WHERE kontonum = '{kontonum2}'";
+                SqlCommand cmd4 = new SqlCommand(query, cn);
+                cmd3.ExecuteNonQuery();
 
-            SqlCommand cmd5 = new SqlCommand($"INSERT INTO Overforing(konto1, konto2, datum, belopp) VALUES('{kontonum}', '{kontonum2}', '{datum}', '{belopp}')", cn);
-            cmd5.ExecuteNonQuery();
+                SqlCommand cmd5 = new SqlCommand($"INSERT INTO Overforing(konto1, konto2, datum, belopp) VALUES('{kontonum}', '{kontonum2}', '{datum}', '{belopp}')", cn);
+                cmd5.ExecuteNonQuery();
 
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Overforing", cn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            cn.Close();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Overforing", cn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                cn.Close();
+            }
 
         }
 
