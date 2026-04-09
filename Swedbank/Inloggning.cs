@@ -1,5 +1,8 @@
+
 using System.Data;
 using System.Data.SqlClient;
+
+
 
 namespace Swedbank
 {
@@ -30,33 +33,32 @@ namespace Swedbank
 
             cn.Open();
 
-            // HÄMTA lösenord för användaren
             SqlCommand cmd = new SqlCommand(
-                "SELECT losenord FROM Anvandare WHERE anvnamn = @anv", cn);
+                "SELECT losenord, roll FROM Anvandare WHERE anvnamn = @anv", cn);
             cmd.Parameters.AddWithValue("@anv", an1);
 
-            object result = cmd.ExecuteScalar();
+            SqlDataReader result = cmd.ExecuteReader();
 
-            if (result == null)
+            if (!result.Read())
             {
                 cn.Close();
                 MessageBox.Show("Fel användarnamn eller lösenord.");
                 return;
             }
 
-            string dbLosen = result.ToString();
+            string dbLosen = result["losenord"].ToString();
+            string dbRoll = result["roll"].ToString();
 
+            result.Close();
+            cn.Close();
             if (dbLosen != los1)
             {
-                cn.Close();
+                
                 MessageBox.Show("Fel användarnamn eller lösenord.");
                 return;
             }
 
-            cn.Close();
-
-            // Logik: admin är anvnamn 123456789
-            if (an1 == "123456789")
+            if (dbRoll == "Admin")
             {
                 Form2 fr2 = new Form2();
                 fr2.Show();
@@ -69,6 +71,7 @@ namespace Swedbank
                 this.Hide();
 
             }
+
         }
 
     }
