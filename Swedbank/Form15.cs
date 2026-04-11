@@ -52,6 +52,13 @@ namespace Swedbank
                 cmd.ExecuteNonQuery();
 
                 int saldo = (int)cmd.ExecuteScalar();
+                
+                if (uttag > saldo)
+                {
+                    MessageBox.Show("Du kan inte ta ut mer pengar än vad som finns på kontot.");
+                    cn.Close();
+                    return;
+                }
                 int saldoefter = saldo - uttag;
 
 
