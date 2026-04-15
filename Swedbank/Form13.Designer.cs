@@ -47,6 +47,8 @@
             button4 = new Button();
             pictureBox1 = new PictureBox();
             label7 = new Label();
+            button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -56,7 +58,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { " Lön", " Spara", " Bil " });
             comboBox1.Location = new Point(176, 166);
-            comboBox1.Margin = new Padding(2, 2, 2, 2);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(168, 23);
             comboBox1.TabIndex = 52;
@@ -67,7 +69,7 @@
             dataGridView1.BackgroundColor = Color.PeachPuff;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(411, 95);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(537, 178);
@@ -76,7 +78,7 @@
             // textBox2
             // 
             textBox2.Location = new Point(176, 126);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(168, 23);
             textBox2.TabIndex = 49;
@@ -114,7 +116,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(176, 91);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(168, 23);
             textBox1.TabIndex = 48;
@@ -134,7 +136,7 @@
             // button2
             // 
             button2.Location = new Point(784, 34);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(81, 20);
             button2.TabIndex = 43;
@@ -145,7 +147,7 @@
             // button1
             // 
             button1.Location = new Point(16, 34);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(78, 20);
             button1.TabIndex = 42;
@@ -156,7 +158,7 @@
             // textBox3
             // 
             textBox3.Location = new Point(176, 205);
-            textBox3.Margin = new Padding(2, 2, 2, 2);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(168, 23);
             textBox3.TabIndex = 56;
@@ -184,7 +186,7 @@
             // textBox4
             // 
             textBox4.Location = new Point(176, 248);
-            textBox4.Margin = new Padding(2, 2, 2, 2);
+            textBox4.Margin = new Padding(2);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(168, 73);
@@ -193,10 +195,10 @@
             // button3
             // 
             button3.BackColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(176, 339);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Location = new Point(43, 338);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(167, 29);
+            button3.Size = new Size(87, 29);
             button3.TabIndex = 57;
             button3.Text = "Spara";
             button3.UseVisualStyleBackColor = false;
@@ -206,7 +208,7 @@
             // 
             button4.BackColor = Color.Coral;
             button4.Location = new Point(582, 309);
-            button4.Margin = new Padding(2, 2, 2, 2);
+            button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(151, 26);
             button4.TabIndex = 58;
@@ -218,7 +220,7 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(889, 350);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -237,11 +239,37 @@
             label7.TabIndex = 59;
             label7.Text = "Swedbank";
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ControlLightLight;
+            button5.Location = new Point(176, 338);
+            button5.Margin = new Padding(2);
+            button5.Name = "button5";
+            button5.Size = new Size(87, 29);
+            button5.TabIndex = 61;
+            button5.Text = "Uppdatera";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = SystemColors.ControlLightLight;
+            button6.Location = new Point(297, 338);
+            button6.Margin = new Padding(2);
+            button6.Name = "button6";
+            button6.Size = new Size(87, 29);
+            button6.TabIndex = 62;
+            button6.Text = "Ta bort";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // Form13
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(972, 405);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(pictureBox1);
             Controls.Add(label7);
             Controls.Add(button4);
@@ -260,7 +288,7 @@
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form13";
             Text = "Skapa konto";
             Load += Form13_Load;
@@ -290,5 +318,7 @@
         private Button button4;
         private PictureBox pictureBox1;
         private Label label7;
+        private Button button5;
+        private Button button6;
     }
 }

@@ -38,7 +38,6 @@ namespace Swedbank
             this.Hide();
         }
 
-        // spara button
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" || textBox4.Text.Trim() == "")
@@ -51,7 +50,7 @@ namespace Swedbank
                 int kontonum = int.Parse(textBox1.Text.Trim());
                 int personnu = int.Parse(textBox2.Text.Trim());
                 string kontotyp = comboBox1.Text.Trim();
-                float saldo =float.Parse(textBox3.Text.Trim());
+                float saldo = float.Parse(textBox3.Text.Trim());
                 string bsekrivning = textBox4.Text.Trim();
 
                 cn.Open();
@@ -64,6 +63,11 @@ namespace Swedbank
                 cmd.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("Du har skapat ett konto.");
+
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
             }
             cn.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Konto", cn);
@@ -73,11 +77,88 @@ namespace Swedbank
             cn.Close();
 
         }
-        // Visa kundens konto button
+
         private void button4_Click(object sender, EventArgs e)
         {
             cn.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Konto", cn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            cn.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string kontonum = textBox1.Text.Trim();
+            string personnu = textBox2.Text.Trim();
+            string kontotyp = comboBox1.Text.Trim();
+            string saldo = textBox3.Text.Trim();
+            string beskrivning = textBox4.Text.Trim();
+
+            if (personnu != "")
+            {
+                cn.Open();
+                string query = $"UPDATE Konto SET personnu = '{personnu}' WHERE kontonum = '{kontonum}'";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            if (kontotyp != "")
+            {
+                cn.Open();
+                string query = $"UPDATE Konto SET kontotyp = '{kontotyp}' WHERE kontonum = '{kontonum}'";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            if (saldo != "")
+            {
+                cn.Open();
+                string query = $"UPDATE Konto SET saldo = '{saldo}' WHERE kontonum = '{kontonum}'";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            if (beskrivning != "")
+            {
+                cn.Open();
+                string query = $"UPDATE Konto SET beskrivning = '{beskrivning}' WHERE kontonum = '{kontonum}'";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            cn.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Konto", cn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            cn.Close();
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            cn.Open();
+            string kontonum = textBox1.Text.Trim();
+
+            SqlCommand cmd = new SqlCommand("DELETE FROM Konto WHERE kontonum = '" + kontonum + "'", cn);
+            cmd.ExecuteNonQuery();
+            cn.Close();
+
+            textBox1.Text = "";
+
+            cn.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Konto", cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
