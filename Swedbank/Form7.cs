@@ -41,16 +41,11 @@ namespace Swedbank
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Inloggning.UserRole == "Admin")
-            {
+            
                 Form13 fr13 = new Form13();
                 fr13.Show();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Du har inte behörighet att komma åt adminpanelen.");
-            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
